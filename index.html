@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BookFlix</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!--CSS-->
+  <link rel="stylesheet" href="static/css/style.css">
+  <!-- FontAwesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <!-- Animate.css -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+  <!-- AOS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <!-- SweetAlert2 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+<body>
+  <div class="container py-5">
+    <!-- Toggle modo oscuro -->
+    <div class="d-flex justify-content-end mb-3">
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="darkModeToggle">
+        <label class="form-check-label" for="darkModeToggle">Modo oscuro</label>
+      </div>
+    </div>
+
+    <h1 class="text-center mb-4 animate__animated animate__fadeInDown">
+      <i class="fa-solid fa-clapperboard"></i> BookFlix
+    </h1>
+    <p class="text-center text-muted mb-5">Descubre <strong>libros</strong> y <strong>películas</strong> que se ajustan a tus intereses.</p>
+
+    <form id="recommendation-form" class="row g-3 justify-content-center">
+      <div class="col-md-6">
+        <input type="text" id="interests" class="form-control" placeholder="Ej: ciencia ficción, misterio, motivación..." required>
+      </div>
+      <div class="col-md-3">
+        <select id="tipo" class="form-select">
+          <option value="libro">Libros</option>
+          <option value="pelicula">Películas</option>
+        </select>
+      </div>
+      <div class="col-md-2 d-grid">
+        <button type="submit" >
+          <i class="fa-solid fa-magnifying-glass"></i> Buscar
+        </button>
+      </div>
+    </form>
+
+    <div id="loading" class="text-center mt-4 d-none">
+        <i class="fa-solid fa-film fa-spin fa-3x text-warning"></i>
+        <p class="mt-2 text-light">Buscando tu próxima historia...</p>
+    </div>
+
+    <div id="results" class="row row-cols-1 row-cols-md-3 g-4 mt-4">
+      <!-- Resultados aquí -->
+    </div>
+  </div>
+
+    <div class="container mt-5">
+        <h2 class="text-center mb-4"><i class="fa-solid fa-ranking-star"></i> Top 10 Películas de la Semana</h2>
+        <div id="top-movies" class="row row-cols-1 row-cols-md-5 g-4">
+        <!-- Películas del Top 10 se cargarán aquí -->
+        </div>
+    </div>
+
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="static/js/script.js"></script>
+  <script>AOS.init();</script>
+</body>
+</html>
