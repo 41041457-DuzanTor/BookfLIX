@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     loadingDiv.classList.remove('d-none');
 
     try {
-      const response = await fetch('/../recommend.php', {
+      const response = await fetch('../backend/recommend.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ interests: interests, tipo: tipo })
@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // 🔹 Cargar Top 10 películas de la semana (TMDb)
   async function loadTopMovies() {
     try {
-      const response = await fetch('/../recommend.php', {
+      const response = await fetch('../backend/recommend.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ top: "peliculas" })
