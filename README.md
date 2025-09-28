@@ -19,3 +19,5 @@ docs/       → documentación
 
 ## 👨‍💻 Equipo
 - Duzian Johanny Torres Huarcaya
+- Johana Miriam Gamarra Gonza
+
