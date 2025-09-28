@@ -2,9 +2,9 @@ name: BookFlix CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "**" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "**" ]
 
 jobs:
   test:
@@ -24,3 +24,4 @@ jobs:
 
       - name: Run PHPUnit tests
         run: vendor/bin/phpunit --coverage-text
+
